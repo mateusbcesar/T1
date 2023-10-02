@@ -1,5 +1,3 @@
-
-
 // Classe para representar um funcionário
 class Employee extends User {
     private Department department;
