@@ -1,18 +1,11 @@
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+public class Usuário {
+    private int idUsuario;
+    private String nomeUsuario;
+    private UserType tipoUsuario;
 
-// Classe para representar um usuário
-class User {
-    private int userId;
-    private String userName;
-    private UserType userType;
-
-    public User(int userId, String userName, UserType userType) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userType = userType;
+    public Usuário(int idUsuario, String nomeUsuario, UserType tipoUsuario) {
+        this.idUsuario = idUsuario;
+        this.nomeUsuario = nomeUsuario;
+        this.tipoUsuario = tipoUsuario;
     }
-
-    // Métodos getters e setters
 }
