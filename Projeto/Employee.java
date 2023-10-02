@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 // Classe para representar um funcionário
 class Employee extends User {
     private Department department;
