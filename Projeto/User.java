@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 // Classe para representar um usuário
 class User {
     private int userId;
