@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 // Classe para representar um item do pedido
 class OrderItem {
     private String description;
