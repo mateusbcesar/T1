@@ -1,18 +1,11 @@
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+public class Item {
+    private String descricao;
+    private double preco;
+    private int quantidade;
 
-// Classe para representar um item do pedido
-class OrderItem {
-    private String description;
-    private double unitPrice;
-    private int quantity;
-
-    public OrderItem(String description, double unitPrice, int quantity) {
-        this.description = description;
-        this.unitPrice = unitPrice;
-        this.quantity = quantity;
+    public Item(String descricao, double preco, int quantidade) {
+        this.descricao = descricao;
+        this.preco = preco;
+        this.quantidade = quantidade;
     }
-
-    // Métodos getters
 }
