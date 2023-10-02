@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 // Enum para representar o tipo de usuário
 enum UserType {
     EMPLOYEE,
@@ -17,8 +13,12 @@ enum OrderStatus {
 }
 
 // Classe principal que contém o método main
-public class PurchaseOrderSystem {
+public class SistemaDeCompra {
     public static void main(String[] args) {
-        // Aqui você pode começar a criar instâncias de usuários, departamentos e pedidos para testar o sistema.
+        Departamento d1 = new Departamento("Financeiro", 20);
+        Empregado e1 = new Empregado(21, "Nicholas", d1, UserType.EMPLOYEE);
+        Item item1 = new Item(null, 12000.0, 2);
+
+
     }
 }
