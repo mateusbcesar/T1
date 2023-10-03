@@ -7,16 +7,16 @@ import java.util.List;
 public class ComprarItem{
 
 
-    private Empregado empregado;
-    private Departamento departamentoEmpregado;
+    private Funcionario funcionario;
+    private Departamento departamentoFuncionario;
     private Date dia;
     private Date diaFinal;
     private OrderStatus status;
     private ArrayList<Item> items;
 
-    public ComprarItem(Empregado empregado, Departamento departamentoEmpregado, Date dia) {
-        this.empregado = empregado;
-        this.departamentoEmpregado = departamentoEmpregado;
+    public ComprarItem(Funcionario funcionario, Departamento departamentoFuncionario, Date dia) {
+        this.funcionario = funcionario;
+        this.departamentoFuncionario = departamentoFuncionario;
         this.dia = dia;
         this.status = OrderStatus.OPEN;
         this.items = new ArrayList<>();
