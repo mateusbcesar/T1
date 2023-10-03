@@ -16,20 +16,20 @@ public class SistemaDeCompra {
         Departamento d3 = new Departamento("Engenharia", 70);
         Departamento d4 = new Departamento("Judiciário", 15);
         Departamento d5 = new Departamento("RH", 5);
-        Funcionario e1 = new Funcionario(21, "Nicholas", d1, t1);
-        Funcionario e2 = new Funcionario(95, "Maria", d2, t1);
-        Funcionario e3 = new Funcionario(84, "Joao", d3, t1);
-        Funcionario e4 = new Funcionario(83, "Mateus", d4, t1);
-        Funcionario e5 = new Funcionario(52, "Joao", d5, t1);
-        Funcionario e6 = new Funcionario(34, "Eduardo", d1, t1);
-        Funcionario e7 = new Funcionario(53, "Carlos", d2, t1);
-        Funcionario e8 = new Funcionario(67, "Ana", d3, t1);
-        Funcionario e9 = new Funcionario(39, "Heraclides", d4, t1);
-        Funcionario e10 = new Funcionario(1, "Catarina", d5, t1);
-        Funcionario e11 = new Funcionario(8, "Sarah", d1, t1);
-        Funcionario e12 = new Funcionario(98, "Emma", d2, t1);
-        Funcionario e13 = new Funcionario(100, "Alejandro", d3, t1);
-        Funcionario e14 = new Funcionario(324, "Douglas", d4, t1);
-        Funcionario e15 = new Funcionario(453, "Marinez", d5, t1);
+        Funcionario f1 = new Funcionario(21, "Nicholas", d1, t1);
+        Funcionario f2 = new Funcionario(95, "Maria", d2, t1);
+        Funcionario f3 = new Funcionario(84, "Joao", d3, t1);
+        Funcionario f4 = new Funcionario(83, "Mateus", d4, t1);
+        Funcionario f5 = new Funcionario(52, "Joao", d5, t1);
+        Funcionario f6 = new Funcionario(34, "Eduardo", d1, t1);
+        Funcionario f7 = new Funcionario(53, "Carlos", d2, t1);
+        Funcionario f8 = new Funcionario(67, "Ana", d3, t1);
+        Funcionario f9 = new Funcionario(39, "Heraclides", d4, t1);
+        Funcionario f10 = new Funcionario(1, "Catarina", d5, t1);
+        Funcionario f11 = new Funcionario(8, "Sarah", d1, t1);
+        Funcionario f12 = new Funcionario(98, "Emma", d2, t1);
+        Funcionario f13 = new Funcionario(100, "Alejandro", d3, t1);
+        Funcionario f14 = new Funcionario(324, "Douglas", d4, t1);
+        Funcionario f15 = new Funcionario(453, "Marinez", d5, t1);
     }
 }
