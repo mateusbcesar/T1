@@ -9,13 +9,14 @@ public class ComprarItem{
 
     private Funcionario funcionario;
     private Departamento departamentoFuncionario;
-    private String dia;
-    private String diaFinal;
+    private Date dia;
+    private Date diaFinal;
     private OrderStatus status;
     private ArrayList<Item> items;
+    private Usuario usuario;
 
     public ComprarItem(Funcionario funcionario, Departamento departamentoFuncionario,
-    String dia) {
+    Date dia, Date diaFinal) {
         this.funcionario = funcionario;
         this.departamentoFuncionario = departamentoFuncionario;
         this.dia = dia;
@@ -35,8 +36,16 @@ public class ComprarItem{
         this.valorItem = preco*quantidade;
 
         if(valorItem<=maxOrderAmount){
-        items.add(item);}
+            items.add(item);}
         }
-    public void administradorAvaliador() {
-        
-    }
+
+    public avaliarPedido (Usuario usuario) {
+        this.usuario = usuario;
+        this.dia = dia;
+        this.diaFinal = diaFinal;
+
+        if(tipoDeUsuário == administrador){
+            List (dia - diaFinal);
+            
+        }
+
