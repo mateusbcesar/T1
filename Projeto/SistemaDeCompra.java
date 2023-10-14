@@ -24,12 +24,12 @@ public class SistemaDeCompra {
         Funcionario f6 = new Funcionario(34, "Eduardo", d1, t1);
         Funcionario f7 = new Funcionario(53, "Carlos", d2, t1);
         Funcionario f8 = new Funcionario(67, "Ana", d3, t1);
-        Funcionario f9 = new Funcionario(39, "Heraclides", d4, t1);
+        Funcionario f9 = new Funcionario(39, "Michael", d4, t1);
         Funcionario f10 = new Funcionario(1, "Catarina", d5, t1);
         Funcionario f11 = new Funcionario(8, "Sarah", d1, t1);
         Funcionario f12 = new Funcionario(98, "Emma", d2, t1);
-        Funcionario f13 = new Funcionario(100, "Alejandro", d3, t1);
+        Funcionario f13 = new Funcionario(100, "Lucas", d3, t1);
         Funcionario f14 = new Funcionario(324, "Douglas", d4, t1);
-        Funcionario f15 = new Funcionario(453, "Marinez", d5, t1);
+        Funcionario f15 = new Funcionario(453, "Ana", d5, t1);
     }
 }
