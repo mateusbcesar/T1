@@ -7,4 +7,12 @@ public class Funcionario extends Usuario {
         super(idUsuario, nomeUsuario, tipoUsuario);
         this.departamento = departamento;
     }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento novoDepartamento) {
+        this.departamento = novoDepartamento;
+    }
 }
