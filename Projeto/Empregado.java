@@ -1,8 +1,18 @@
-public class Empregado extends Usuário {
+package Projeto;
+
+public class Funcionario extends Usuario {
     private Departamento departamento;
 
-    public Empregado(int idUsuario, String nomeUsuario, Departamento departamento, UserType tipoUsuario) {
-        super(idUsuario, nomeUsuario, tipoUsuario.EMPLOYEE);
+    public Funcionario(int idUsuario, String nomeUsuario, Departamento departamento, TipoDeUsuário tipoUsuario) {
+        super(idUsuario, nomeUsuario, tipoUsuario);
         this.departamento = departamento;
+    }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento novoDepartamento) {
+        this.departamento = novoDepartamento;
     }
 }
