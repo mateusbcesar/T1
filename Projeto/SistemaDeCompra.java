@@ -31,5 +31,16 @@ public class SistemaDeCompra {
         Funcionario f13 = new Funcionario(100, "Lucas", d3, t1);
         Funcionario f14 = new Funcionario(324, "Douglas", d4, t1);
         Funcionario f15 = new Funcionario(453, "Ana", d5, t1);
+        Item i1 = new Item("Caneta", 1.50, 1);
+        Item i2 = new Item("Lapis", 0.50, 1);
+        Item i3 = new Item("Borracha", 0.75, 1);
+        Item i4 = new Item("Caderno", 5.00, 1);
+        Item i5 = new Item("Mochila", 10.00, 1);
+        ComprarItem compra1 = new ComprarItem(f1, "01/01/2021");
+        compra1.addItem(i5);
+        compra1.addItem(i4);
+        compra1.mostrarPedidos();
+        compra1.getPrecoTotalPedido();
+        System.out.println(compra1);
     }
 }
