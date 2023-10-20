@@ -10,4 +10,20 @@ public class Item {
         this.preco = preco;
         this.quantidade = quantidade;
     }
+
+    public double getPreco(){
+        return this.preco;
+    }
+
+    public String getDescricao(){
+        return this.descricao;
+    }
+
+    public int getQuantidade(){
+        return this.quantidade;
+    }
+
+    public double getPrecoTotal(){
+        return this.preco * this.quantidade;
+    }
 }
