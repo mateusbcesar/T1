@@ -1,5 +1,8 @@
 package Projeto;
 
+import java.util.List;
+import java.util.Scanner;
+
 enum OrderStatus {
     OPEN,
     APPROVED,
@@ -42,5 +45,66 @@ public class SistemaDeCompra {
         compra1.mostrarPedidos();
         compra1.getPrecoTotalPedido();
         System.out.println(compra1);
+
+        ComprarItem compra = criarNovoPedido(f15, "01/01/2021");
+        compra.addItem(i1);
+        compra.addItem(i1);
+        compra.addItem(i2);
+        compra.mostrarItens();
+        compra.getPrecoTotalPedido();
+        System.out.println(compra);
+    }
+
+    private static ComprarItem criarNovoPedido(Funcionario funcionario, String dia){
+        ComprarItem novopedido = new ComprarItem(funcionario, dia);
+        novopedido.setDiaFinal("05/01/2021");
+        novopedido.setStatus(OrderStatus.OPEN);
+        return novopedido;
+    }
+
+    private static void avaliarPedido(ComprarItem pedido, OrderStatus novoStatus) {
+        if (novoStatus == OrderStatus.APPROVED || novoStatus == OrderStatus.REJECTED) {
+            if (pedido.getFuncionario().getTipoUsuario().getTipoDeUsuário().equalsIgnoreCase("administrador")) {
+                System.out.println("Detalhes do Pedido:");
+                System.out.println(pedido);
+                if (pedido.podeSerModificado()) {
+                    System.out.println("Deseja aprovar (A) ou rejeitar (R) o pedido?");
+                    
+                    Scanner scanner = new Scanner(System.in);
+                    String escolha = scanner.nextLine().toUpperCase();
+    
+                    switch (escolha) {
+                        case "A":
+                            pedido.setStatus(OrderStatus.APPROVED);
+                            System.out.println("Pedido aprovado com sucesso!");
+                            break;
+                        case "R":
+                            pedido.setStatus(OrderStatus.REJECTED);
+                            System.out.println("Pedido rejeitado.");
+                            break;
+                        default:
+                            System.out.println("Escolha inválida. O pedido permanece inalterado.");
+                    }
+                } else {
+                    System.out.println("Não é possível modificar um pedido já aprovado, rejeitado ou concluído.");
+                }
+    
+            } else {
+                System.out.println("Apenas administradores podem avaliar pedidos.");
+            }
+        } else {
+            System.out.println("Status de pedido inválido.");
+        }
+    }
+
+    private static void exibirEstatisticasGerais(List<ComprarItem> pedidos) {
+    int totalPedidos = pedidos.size();
+    long pedidosAprovados = pedidos.stream().filter(p -> p.getStatus() == OrderStatus.APPROVED).count();
+    long pedidosReprovados = pedidos.stream().filter(p -> p.getStatus() == OrderStatus.REJECTED).count();
+
+    System.out.println("Estatísticas Gerais:");
+    System.out.println("Número total de pedidos: " + totalPedidos);
+    System.out.println("Pedidos aprovados: " + pedidosAprovados + " (" + ((double) pedidosAprovados / totalPedidos) * 100 + "%)");
+    System.out.println("Pedidos reprovados: " + pedidosReprovados + " (" + ((double) pedidosReprovados / totalPedidos) * 100 + "%)");
     }
 }
