@@ -26,16 +26,4 @@ public class Item {
     public double getPrecoTotal(){
         return this.preco * this.quantidade;
     }
-
-    public void setPreco(){
-        this.preco = preco;
-    }
-
-    public void setDescricao(){
-        this.descricao = descricao;
-    }
-
-    public void setQuantidade(){
-        this.quantidade = quantidade;
-    }
 }
