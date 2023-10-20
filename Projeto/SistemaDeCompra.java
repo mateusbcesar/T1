@@ -116,12 +116,10 @@ public class SistemaDeCompra {
         }
     }
 
-        // Método para calcular as estatísticas gerais
     public void calcularEstatisticasGerais() {
-        List<PedidoDeAquisicao> pedidos = getPedidos(); // Suponha que você tenha um método getPedidos() que retorna todos os pedidos.
+        List<PedidoDeAquisicao> pedidos = getPedidos(); 
          }
 
-    // Converter as Strings de data em LocalDate (assumindo que a data está no formato "dd/MM/yyyy")
         LocalDate hoje = LocalDate.now();
         LocalDate dataLimite = hoje.minusDays(30);
 
@@ -135,7 +133,6 @@ public class SistemaDeCompra {
     System.out.println("Pedidos aprovados: " + pedidosAprovados + " (" + ((double) pedidosAprovados / totalPedidos) * 100 + "%)");
     System.out.println("Pedidos reprovados: " + pedidosReprovados + " (" + ((double) pedidosReprovados / totalPedidos) * 100 + "%)");
 
-    // 8.2 Número de pedidos nos últimos 30 dias e seu valor médio.
         LocalDate hoje = LocalDate.now();
         LocalDate dataLimite = hoje.minus(30, ChronoUnit.DAYS);
 
@@ -158,7 +155,6 @@ public class SistemaDeCompra {
         System.out.println("Número de pedidos nos últimos 30 dias: " + pedidosUltimos30Dias.size());
         System.out.println("Valor médio dos pedidos nos últimos 30 dias: " + valorMedioPedidosUltimos30Dias);
 
-    // 8.3 Valor total de cada categoria nos últimos 30 dias.
     for (Departamento departamento : departamentos) {
         double valorTotalCategoria = pedidosUltimos30Dias.stream()
                 .filter(pedido -> pedido.getDepartamentoSolicitante().equals(departamento))
@@ -167,7 +163,6 @@ public class SistemaDeCompra {
         System.out.println("Categoria: " + departamento.getNome() + " - Valor Total: " + valorTotalCategoria);
     }
 
-   // 8.4 Detalhes do pedido de aquisição de maior valor ainda aberto.
         PedidoDeAquisicao pedidoMaiorValorAberto = pedidos.stream()
                 .filter(pedido -> pedido.getStatus() == StatusPedido.ABERTO)
                 .max(Comparator.comparingDouble(PedidoDeAquisicao::getValorTotal))
